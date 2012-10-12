@@ -5,6 +5,8 @@ Unlike the installation of DevStack this is a complete installation of OpenStack
 This installation of OpenStack Essex version is done via puppet. This script will do all the stuff for you. 
 You will be asked for some network related stuff during installation. With this informations the script will 
 create a puppet manifest and starts the installation process. 
+Requirement is a fresh Ubuntu 12.04 LTS installation.
+
 After installation has been successfull, you can open the openStack Dashbord with http://your_public_ip/syspanel.
 
 
