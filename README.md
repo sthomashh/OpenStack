@@ -11,8 +11,9 @@ After installation has been successfull, you can open the openStack Dashbord wit
 
 
 All you have to do is to start the script with 
-
->>> python installOpenStack.py
+<pre><code>
+python installOpenStack.all.py
+<code><pre>
 
 and follow the instructions...
 
