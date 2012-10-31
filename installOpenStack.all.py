@@ -33,6 +33,9 @@ if debug == 1:
 else:
     debugflag = ''
 stack.append('apt-get -y '+debugflag+'update')
+"""
+apt-get -y '+debugflag+'install puppet=2.7.19-1puppetlabs2 git rake
+"""
 stack.append('apt-get -y '+debugflag+'install puppet git rake')
 stack.append('git clone git://github.com/puppetlabs/puppetlabs-openstack /etc/puppet/modules/openstack')
 stack.append('cd /etc/puppet/modules/openstack')
