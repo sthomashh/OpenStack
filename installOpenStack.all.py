@@ -35,8 +35,16 @@ else:
 stack.append('apt-get -y '+debugflag+'update')
 """
 apt-get -y '+debugflag+'install puppet=2.7.19-1puppetlabs2 git rake
+    
 """
-stack.append('apt-get -y '+debugflag+'install puppet git rake')
+stack.append('/usr/bin/wget --quiet http://apt.puppetlabs.com/puppetlabs-release-precise.deb -O /tmp/puppetlabs-release-precise.deb')
+stack.append('/usr/bin/dpkg -i /tmp/puppetlabs-release-precise.deb')
+stack.append('apt-get update')
+stack.append('apt-get -y install puppet-common=2.7.19-1puppetlabs2')
+stack.append('apt-get -y install puppet=2.7.19-1puppetlabs2')
+stack.append('echo puppet hold | /usr/bin/dpkg --set-selections')
+
+stack.append('apt-get -y '+debugflag+'install git rake')
 stack.append('git clone git://github.com/puppetlabs/puppetlabs-openstack /etc/puppet/modules/openstack')
 stack.append('cd /etc/puppet/modules/openstack')
 stack.append('git checkout essex')
